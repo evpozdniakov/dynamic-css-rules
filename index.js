@@ -10,7 +10,7 @@ export function applyCssRule(ruleText) {
     })
 }
 
-static applyRule(selector, property, value) {
+function applyRule(selector, property, value) {
     const styleSheets = getStyleSheets()
     const existingRuleIndex = findRuleBySelectorAndProperty(selector, property)
     const ruleText = makeRuleText(selector, property, value)
