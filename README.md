@@ -1,14 +1,14 @@
 ### How to install
 
 ```
-yarn add dynamic-css-rules -dev
+yarn add dynamic-css-rules
 
 ```
 
 or
 
 ```
-npm i -D dynamic-css-rules
+npm i dynamic-css-rules
 
 ```
 

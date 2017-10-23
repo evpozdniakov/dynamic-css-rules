@@ -1,6 +1,6 @@
 var styleSheetsIndex = null
 
-export function applyCssRule(ruleText) {
+function applyCssRule(ruleText) {
     const { selector, properties } = parseCssRule(ruleText)
 
     properties.forEach(item => {
@@ -82,3 +82,5 @@ function makeRuleText(selector, property, value) {
 function makeRuleTextStart(selector, property) {
     return `${selector} { ${property}:`
 }
+
+module.exports = applyCssRule
