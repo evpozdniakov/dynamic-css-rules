@@ -6,6 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Evgeniy Pozdnyakov",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evpozdniakov/dynamic-css-rules"
+  },
+  "keywords": [
+    "dynamic css",
+    "css rules"
+  ],
+  "author": "Evgeniy Pozdnyakov <evpozdniakov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evpozdniakov/dynamic-css-rules/issues"
+  },
+  "homepage": "https://github.com/evpozdniakov/dynamic-css-rules"
 }
