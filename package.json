@@ -1,0 +1,11 @@
+{
+  "name": "dynamic-css-rules",
+  "version": "1.0.0",
+  "description": "Allows to set and update css rules dynamically.'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evgeniy Pozdnyakov",
+  "license": "ISC"
+}
