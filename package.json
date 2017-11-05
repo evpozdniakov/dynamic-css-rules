@@ -4,6 +4,8 @@
   "description": "Allows to set and update css rules dynamically.'",
   "main": "index.js",
   "scripts": {
+    "build": "NODE_ENV=production webpack --progress",
+    "dist": "NODE_ENV=production webpack --progress --config webpack.config.prod.js",
     "test": "jest"
   },
   "repository": {
@@ -21,6 +23,9 @@
   },
   "homepage": "https://github.com/evpozdniakov/dynamic-css-rules",
   "devDependencies": {
-    "jest": "^21.2.1"
+    "compression-webpack-plugin": "^1.0.1",
+    "jest": "^21.2.1",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "webpack": "^3.8.1"
   }
 }
