@@ -1,6 +1,6 @@
 {
   "name": "dynamic-css-rules",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Allows to set and update css rules dynamically.'",
   "main": "index.js",
   "scripts": {
