@@ -1,7 +1,5 @@
-const getStyleSheets = require('./getStyleSheets')
 const parseCssRule = require('./parseCssRule')
-
-var styleSheetsIndex = null
+const applyRule = require('./applyRule')
 
 function applyCssRule(ruleText) {
     try {
@@ -15,20 +13,6 @@ function applyCssRule(ruleText) {
     }
     catch (err) {
         console.error(err)
-    }
-}
-
-function applyRule(selector, property, value) {
-    const styleSheets = getStyleSheets()
-    const existingRuleIndex = findRuleBySelectorAndProperty(selector, property)
-    const ruleText = makeRuleText(selector, property, value)
-
-    if (existingRuleIndex >= 0) {
-        styleSheets.deleteRule(existingRuleIndex)
-        styleSheets.insertRule(ruleText, existingRuleIndex)
-    }
-    else {
-        styleSheets.insertRule(ruleText, getNextAvailableIndex())
     }
 }
 

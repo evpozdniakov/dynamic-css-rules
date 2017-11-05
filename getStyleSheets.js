@@ -1,3 +1,5 @@
+var styleSheetsIndex = null
+
 function getStyleSheets() {
     if (styleSheetsIndex !== null) {
         return document.styleSheets[styleSheetsIndex]
