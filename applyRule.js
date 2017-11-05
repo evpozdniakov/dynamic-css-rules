@@ -14,4 +14,33 @@ function applyRule(selector, property, value) {
     }
 }
 
+function getNextAvailableIndex() {
+    const styleSheets = getStyleSheets()
+
+    return styleSheets.cssRules.length
+}
+
+function findRuleBySelectorAndProperty(selector, property) {
+    const selectorWithProperty = makeRuleTextStart(selector, property)
+    const { cssRules } = getStyleSheets()
+
+    for(var i = 0; i < cssRules.length; i++) {
+        let rule = cssRules[i]
+
+        if (rule.cssText.indexOf(selectorWithProperty) >= 0) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+function makeRuleText(selector, property, value) {
+    return `${makeRuleTextStart(selector, property)} ${value}; }`
+}
+
+function makeRuleTextStart(selector, property) {
+    return `${selector} { ${property}:`
+}
+
 module.exports = applyRule

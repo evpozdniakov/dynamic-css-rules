@@ -45,33 +45,4 @@ function parseCssRule(ruleText) {
     return {selector, properties}
 }
 
-function findRuleBySelectorAndProperty(selector, property) {
-    const selctorWithProperty = makeRuleTextStart(selector, property)
-    const { cssRules } = getStyleSheets()
-
-    for(var i = 0; i < cssRules.length; i++) {
-        let rule = cssRules[i]
-
-        if (rule.cssText.indexOf(selctorWithProperty) >= 0) {
-            return i;
-        }
-    }
-
-    return -1;
-}
-
-function getNextAvailableIndex() {
-    const styleSheets = getStyleSheets()
-
-    return styleSheets.cssRules.length
-}
-
-function makeRuleText(selector, property, value) {
-    return `${makeRuleTextStart(selector, property)} ${value}; }`
-}
-
-function makeRuleTextStart(selector, property) {
-    return `${selector} { ${property}:`
-}
-
 module.exports = parseCssRule
