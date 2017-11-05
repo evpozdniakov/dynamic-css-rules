@@ -39,8 +39,8 @@ function parseCssRule(ruleText) {
         const property = pair[0].trim()
         const value = pair[1].trim()
 
-        return Object.assign({}, res, {[property]: value})
-    }, {})
+        return res.concat({[property]: value})
+    }, [])
 
     return {selector, properties}
 }
